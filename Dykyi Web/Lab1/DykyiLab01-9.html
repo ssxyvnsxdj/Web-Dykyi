@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Студент НУПП Дикий Павло Дмитрович</title>
+    <meta name="description" content="Особиста веб-сторінка студента НУПП Дикого Павла Дмитровича, де розповідається про себе, свої хобі та програмування.">
+    <meta name="keywords" content="Студент, НУПП, Дикий Павло, програмування, хобі, веб-сторінка">
+    <style>
+        body {
+            background-color: #1e1e1e;
+            color: #f0f0f0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #ff5722;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        .section {
+            max-width: 800px;
+            margin: 0 auto 40px auto;
+            text-align: justify;
+            line-height: 1.6;
+            padding: 20px;
+            background-color: #2a2a2a;
+            border-radius: 10px;
+            transition: background-color 0.5s ease, box-shadow 0.5s ease;
+        }
+        .section:hover {
+            background-color: #333333;
+            box-shadow: 0 0 10px rgba(255, 87, 34, 0.7);
+        }
+        .highlight {
+            font-weight: bold;
+            font-style: italic;
+            text-decoration: underline;
+            color: #03dac5;
+        }
+        pre {
+            background-color: #2d2d2d;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.95em;
+        }
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 1.1em;
+            color: #ff5722;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Про себе</h1>
+    <div class="section">
+        <p>Привіт! Мене звати <span class="highlight">Дикий Павло Дмитрович</span>, я студент групи 303-ТН 122 спеціальності "Комп'ютерні науки" <span class="highlight">Національного університету «Полтавська Політехніка» ім. Юрія Кондратюка</span>. Моя пристрасть до технологій почалася ще в дитинстві, коли я вперше познайомився з комп'ютерними іграми та програми.</p>
+        <p>Я завжди прагну розширювати свої знання в сфері <span class="highlight">веб-розробки</span> та <span class="highlight">програмування</span>. Крім навчання, я люблю подорожувати та знайомитися з новими культурами, що допомагає мені розвивати креативне мислення та відкритість до нового.</p>
+    </div>
+
+    <h1>Моє хобі</h1>
+    <div class="section">
+        <p>Одним із моїх головних захоплень є <span class="highlight">написання власних програм</span> та створення власних проектів. Я насолоджуюся процесом кодування та вирішенням складних завдань, що постають переді мною.</p>
+
+        <h2>Програмування</h2>
+        <pre>
+def calculator():
+    print("Простий калькулятор на Python")
+    a = float(input("Введіть перше число: "))
+    b = float(input("Введіть друге число: "))
+    операція = input("Виберіть операцію (+, -, *, /): ")
+    
+    if операція == "+":
+        результат = a + b
+    elif операція == "-":
+        результат = a - b
+    elif операція == "*":
+        результат = a * b
+    elif операція == "/":
+        if b != 0:
+            результат = a / b
+        else:
+            return "Ділення на нуль неможливе."
+    else:
+        return "Невідома операція."
+    
+    return f"Результат: {результат}"
+
+print(calculator())
+        </pre>
+    </div>
+
+    <footer>
+        Студент групи 303-ТН Дикий П.Д.
+    </footer>
+
+</body>
+</html>

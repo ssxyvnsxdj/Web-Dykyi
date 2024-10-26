@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Розклад занять на понеділок</title>
+    <meta name="description" content="Розклад занять на понеділок">
+    <meta name="keywords" content="Розклад, заняття, понеділок, групи">
+
+    <!-- Підключення Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Стилі CSS -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('background.jpg'); /* Замініть 'background.jpg' на шлях до вашого зображення */
+            background-size: cover;
+            background-position: center;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+        }
+
+        .overlay {
+            background-color: rgba(255, 255, 255, 0.9);
+            min-height: 100vh;
+            padding: 50px 20px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            color: #008080;
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 36px;
+            font-style: italic;
+            margin-bottom: 30px;
+            color: #555;
+            text-align: center;
+        }
+
+        .clock-image {
+            display: block;
+            margin: 0 auto 40px auto;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%; /* Зробить зображення круглим */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Додасть тінь */
+        }
+
+        .group-table {
+            width: 80%;
+            max-width: 800px;
+            margin: 0 auto 50px auto;
+            border-collapse: collapse;
+        }
+
+        .group-table td {
+            padding: 20px;
+            background-color: #f1f1f1;
+            border: 1px solid #ddd;
+            transition: background-color 0.3s ease;
+            text-align: center;
+        }
+
+        .group-table td:hover {
+            background-color: #e0e0e0;
+        }
+
+        .group-table a {
+            text-decoration: none;
+            font-size: 24px;
+            color: #007BFF;
+            font-weight: bold;
+        }
+
+        .group-table a:hover {
+            color: #0056b3;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 14px;
+            color: #777;
+        }
+
+        /* Адаптивність для мобільних пристроїв */
+        @media screen and (max-width: 600px) {
+            h1 {
+                font-size: 36px;
+            }
+            h2 {
+                font-size: 24px;
+            }
+            .clock-image {
+                width: 100px;
+                height: 100px;
+            }
+            .group-table {
+                width: 100%;
+            }
+            .group-table td {
+                padding: 15px;
+            }
+            .group-table a {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <h1>Розклад</h1>
+        <h2>занять на понеділок</h2>
+        <img class="clock-image" src="image/clock.jpg" alt="Годинник">
+
+        <!-- Таблиця з інформацією про групи -->
+        <table class="group-table">
+            <tr>
+                <td>
+                    <a href="DykyiLab05-1.html">Група 101-ТК</a>
+                </td>
+                <td>
+                    <a href="DykyiLab05-1.html">Група 102-ТК</a>
+                </td>
+                <td>
+                    <a href="DykyiLab05-1.html">Група 101-ТТ</a>
+                </td>
+            </tr>
+        </table>
+
+        <footer>
+            &copy; 2023 Ваш навчальний заклад
+        </footer>
+    </div>
+</body>
+</html>

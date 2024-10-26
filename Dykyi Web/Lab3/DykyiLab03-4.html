@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Наша Незламна Команда</title>
+    <style>
+        body {
+            background-image: url('friend1.jpg'), url('friend2.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            color: #f0f0f0; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: rgba(30, 30, 30, 0.9);
+            background-blend-mode: darken;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #ff9800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        .section {
+            max-width: 800px;
+            margin: 0 auto 40px auto;
+            text-align: left;
+            line-height: 1.6;
+            padding: 20px;
+            background-color: rgba(42, 42, 42, 0.8);
+            border-radius: 10px;
+            transition: background-color 0.5s ease, box-shadow 0.5s ease;
+        }
+        .section:hover {
+            background-color: rgba(51, 51, 51, 0.9);
+            box-shadow: 0 0 15px rgba(255, 152, 0, 0.7);
+        }
+        .highlight {
+            font-weight: bold;
+            font-style: italic;
+            text-decoration: underline;
+            color: #ffeb3b;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 1.1em;
+            color: #ff9800;
+        }
+        .friends {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        .friend {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .friend:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 10px rgba(29, 11, 194, 0.7);
+        }
+        .friend img {
+            width: 250px;
+            height: auto;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 2px solid #ff9800;
+        }
+        .friend-name {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 1.1em;
+            color: #ffeb3b;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Наша Незламна Команда</h1>
+    <div class="section">
+        <p>Ласкаво просимо до нашої дружньої! Ми – команда мрійників, кодерів та майстрів кави, які разом прагнуть досягти нових вершин у світі технологій. Ознайомтеся з нашими незамінними друзями:</p>
+        <ul>
+            <li><span class="highlight">Іван "Баггер" Петренко</span> – наш невтомний експериментатор, майстер багів та володар незавершених проектів. Його улюблена мова програмування – та, що була до Python. Він завжди знаходить спосіб вийти за межі можливого, навіть якщо це призводить до непередбачуваних результатів. Його креативність не має меж!</li>
+            <li><span class="highlight">Марія "Дебагерка" Іваненко</span> – серце та мозок нашої команди, королева дебагу з неперевершеним чуттям до деталей. Вона може знайти помилку у коді там, де ніхто й не думав її шукати. Завдяки її проникливості наші проекти стають бездоганними. Крім того, Марія завжди готова допомогти та поділитися своїми знаннями з іншими.</li>
+        </ul>
+        <div class="friends">
+            <div class="friend">
+                <img src="/image/friend1.jpg" alt="Ваня 'Баггер' Посенко">
+                <div class="friend-name">Ваня "Баггер" Посенко</div>
+            </div>
+            <div class="friend">
+                <img src="/image/friend2.jpg" alt="Маша 'Дебагерка' Коломієць">
+                <div class="friend-name">Маша "Дебагерка" Коломієць</div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

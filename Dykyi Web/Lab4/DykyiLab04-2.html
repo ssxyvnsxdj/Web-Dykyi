@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab04-2</title>
+    <meta name="description" content="Лабораторна робота 4.1 - Рядки, що біжать">
+    <meta name="keywords" content="HTML, Маркі, Рядки, що біжать, Лабораторна робота">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        .marquee-container {
+            width: 100%;
+            overflow: hidden;
+        }
+        .marquee {
+            height: 50px;
+            line-height: 50px;
+            font-size: 20px;
+            color: #fff;
+            white-space: nowrap;
+        }
+        #marquee1 {
+            background-color: #e74c3c;
+        }
+        #marquee2 {
+            background-color: #3498db;
+        }
+        #marquee3 {
+            background-color: #2ecc71;
+        }
+        #marquee4 {
+            background-color: #9b59b6;
+        }
+        #marquee5 {
+            background-color: #f1c40f;
+        }
+    </style>
+</head>
+<body>
+    <div class="marquee-container">
+        <marquee id="marquee1" class="marquee" behavior="alternate">
+            <span style="font-weight: bold; font-style: italic;">Осмислений текст 1: Цей рядок коливається з боку в бік.</span>
+        </marquee>
+    </div>
+    <div class="marquee-container">
+        <marquee id="marquee2" class="marquee" direction="right">
+            <span style="text-decoration: underline;">Осмислений текст 2: Текст біжить справа наліво та з'являється знову.</span>
+        </marquee>
+    </div>
+
+    <div class="marquee-container">
+        <marquee id="marquee3" class="marquee" behavior="slide">
+            <span style="color: #000;">Осмислений текст 3: Текст біжить зправа наліво та зупиняється.</span>
+        </marquee>
+    </div>
+    <div class="marquee-container">
+        <marquee id="marquee4" class="marquee" scrollamount="2">
+            <span style="font-size: 22px;">Осмислений текст 4: Цей текст рухається повільніше.</span>
+        </marquee>
+    </div>
+    <div class="marquee-container">
+        <marquee id="marquee5" class="marquee" scrollamount="10">
+            <span style="font-size: 18px;">Осмислений текст 5: А цей текст рухається швидше.</span>
+        </marquee>
+    </div>
+
+</body>
+</html>

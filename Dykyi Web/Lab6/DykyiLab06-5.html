@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Сенсорне зображення з областями довільної форми</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .map-container {
+            text-align: center;
+            position: relative;
+            display: inline-block;
+        }
+        .map-container img {
+            max-width: 100%;
+            height: auto;
+        }
+        area {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Сенсорне зображення з областями довільної форми</h1>
+
+    <div class="map-container">
+        <!-- Зображення з картою -->
+        <img src="image/lab6-5.jpg" usemap="#image-map" alt="Сенсорне зображення">
+
+        <!-- Карта з областями довільної форми -->
+        <map name="image-map">
+            <area shape="poly" coords="204,320,115,320,57,142,207,30" href="#" alt="Ліва верхня область" title="Ліва верхня область">
+            <area shape="poly" coords="309,320,209,319,210,25,369,140" href="#" alt="Права верхня область" title="Права верхня область">
+            <area shape="poly" coords="208,321,207,616,116,616,25,468,115,321" href="#" alt="Ліва нижня область" title="Ліва нижня область">
+            <area shape="poly" coords="301,619,207,618,209,321,305,322,385,465" href="#" alt="Права нижня область" title="Права нижня область">
+        </map>
+    </div>
+
+</body>
+</html>

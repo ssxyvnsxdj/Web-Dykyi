@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Моя батьківщина - Полтава</title>
+    <meta name="description" content="Сторінка про Полтаву з фотографіями та описами визначних місць">
+    <meta name="keywords" content="Полтава, Україна, історія, фотографії, пам'ятки">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        .photo {
+            width: 300px;
+            margin: 15px;
+            position: relative;
+            flex-direction: column;
+        }
+        .photo img {
+            width: 100%;
+            height: 200px; 
+            object-fit: cover;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .tooltip {
+            display: none;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: rgba(0,0,0,0.8);
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            max-width: 280px;
+        }
+        .photo:hover .tooltip {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Полтава - Перлина України</h1>
+
+    <div class="gallery">
+
+        <div class="photo">
+            <img src="image/monument_glory.jpg" alt="Монумент Слави">
+            <div class="tooltip">
+                <strong>Монумент Слави</strong><br>
+                Монумент було встановлено на честь 100-річчя перемоги у Полтавській битві. Це одна з найвідоміших пам'яток міста.
+            </div>
+        </div>
+
+        <div class="photo">
+            <img src="image/poltava3.jpg" alt="Біла альтанка">
+            <div class="tooltip">
+                <strong>Біла альтанка</strong><br>
+                Символ Полтави, з якого відкривається чудовий вид на місто та річку Ворсклу.
+            </div>
+        </div>
+
+        <div class="photo">
+            <img src="image/gogol_theater.jpg" alt="Театр ім. Гоголя">
+            <div class="tooltip">
+                <strong>Театр ім. М.В. Гоголя</strong><br>
+                Театр з багатою історією та культурними традиціями. Названий на честь відомого письменника Миколи Гоголя.
+            </div>
+        </div>
+
+        <!-- Додайте більше фотографій за бажанням -->
+
+    </div>
+
+</body>
+</html>
