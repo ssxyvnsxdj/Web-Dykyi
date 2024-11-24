@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Styled Form</title>
+    <style>
+        body {
+            background-color: #fafafa;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .island {
+            background-color: #f2f2f2;
+            padding: 30px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 600px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        select,
+        textarea {
+            background-color: #e0e0e0;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            width: 100%;
+            font-size: 14px;
+        }
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #ccc;
+            color: #333;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #444;
+            color: #fff;
+        }
+        .file-input {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .file-input label {
+            background-color: #ccc;
+            color: #333;
+            padding: 5px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .file-input label:hover {
+            background-color: #444;
+            color: #fff;
+        }
+        .file-input input[type="file"] {
+            display: none;
+        }
+        @media (max-width: 600px) {
+            .island {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="island">
+    <form action="empty.html" method="get" target="_blank">
+        <div>
+            <label for="name">Ваше ім'я:</label>
+            <input type="text" id="name" name="name" maxlength="40">
+        </div>
+
+        <div>
+            <label>Ваша стать:</label>
+            <div>
+                <input type="radio" id="male" name="pol" value="male">
+                <label for="male">Чоловіча</label>
+                <input type="radio" id="female" name="pol" value="female">
+                <label for="female">Жіноча</label>
+            </div>
+        </div>
+
+        <div>
+            <label for="curs">На якому курсі Ви навчаєтесь?</label>
+            <select id="curs" name="curs">
+                <option value="1" selected>Перший</option>
+                <option value="2">Другий</option>
+                <option value="3">Третій</option>
+                <option value="4">Четвертий</option>
+                <option value="5">П'ятий</option>
+            </select>
+        </div>
+
+        <div>
+            <label>Які дисципліни ви вивчаєте на курсі?</label>
+            <div>
+                <input type="checkbox" id="web" name="web" value="yes" checked>
+                <label for="web">WEB-програмування</label><br>
+                <input type="checkbox" id="eldinam" name="eldinam" value="yes">
+                <label for="eldinam">Технічна електродинаміка</label>
+            </div>
+        </div>
+
+        <div>
+            <label for="about">Напишіть декілька слів про себе:</label>
+            <textarea id="about" name="about" rows="6"></textarea>
+        </div>
+
+        <div class="file-input">
+            <input type="file" name="friend" id="file" accept=".pdf,.doc,.docx">
+            <label for="file">Виберіть файл</label>
+        </div>
+
+        <div>
+            <input type="submit" value="Відіслати дані">
+            <input type="reset" value="Очистити форму">
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

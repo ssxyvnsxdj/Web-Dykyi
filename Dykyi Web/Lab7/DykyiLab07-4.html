@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body {
+    font-family: "Times New Roman", Times, serif;
+    margin: 20px;
+    background: #f5f5f5;
+  }
+  
+  .form-container {
+    width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  .title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input[type="text"], 
+  textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: inherit;
+  }
+  
+  .products {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+  }
+  
+  .product-item {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .product-item:last-child {
+    border-bottom: none;
+  }
+
+  .product-item:hover {
+    background-color: #f9f9f9;
+  }
+  
+  .product-checkbox {
+    margin-right: 10px;
+  }
+
+  .product-name {
+    flex-grow: 1;
+  }
+
+  .product-price {
+    min-width: 100px;
+    text-align: right;
+    color: #2c5282;
+    font-weight: bold;
+  }
+  
+  .payment-methods {
+    margin: 15px 0;
+  }
+  
+  .payment-methods label {
+    font-weight: normal;
+    display: inline-block;
+    margin-right: 15px;
+  }
+  
+  .additional-info {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 4px;
+    margin: 15px 0;
+  }
+  
+  .additional-info label {
+    font-weight: normal;
+    display: block;
+    margin: 5px 0;
+  }
+  
+  .submit-btn {
+    background: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+  }
+  
+  .submit-btn:hover {
+    background: #45a049;
+  }
+
+  .additional-info {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 4px;
+    margin: 15px 0;
+  }
+  
+  .additional-info label.section-title {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .checkbox-group {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .checkbox-item input[type="checkbox"] {
+    margin: 0;
+  }
+  
+  .checkbox-item label {
+    font-weight: normal;
+    margin: 0;
+  }
+  
+  textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+
+  .total-amount {
+    text-align: right;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    border-top: 2px solid #333;
+    margin-top: 10px;
+  }
+
+  .total-amount span {
+    color: #2c5282;
+  }
+</style>
+
+
+<script>
+    function calculateTotal() {
+        const products = document.querySelectorAll('.product-checkbox');
+        let total = 0;
+        
+        products.forEach(checkbox => {
+            if (checkbox.checked) {
+                total += parseFloat(checkbox.getAttribute('data-price'));
+            }
+        });
+        
+        document.getElementById('totalAmount').textContent = total.toFixed(2);
+    }
+</script>
+</head>
+<body>
+<div class="form-container">
+  <div class="title">Форма замовлення товару</div>
+  
+  <form>
+    <div class="form-group">
+      <label for="bank-account">Номер банківського рахунку:</label>
+      <input type="text" id="bank-account" name="bank-account" required>
+    </div>
+    
+    <div class="form-group">
+      <label for="personal-id">Особистий іденифікатор користувача:</label>
+      <input type="text" id="personal-id" name="personal-id" required>
+    </div>
+    
+    <div class="form-group">
+      <label>Оберіть товари:</label>
+      <div class="products">
+        <div class="product-item">
+          <input type="checkbox" class="product-checkbox" id="product1" name="products[]" value="1" data-price="37499.99" onchange="calculateTotal()">
+          <label class="product-name" for="product1">Ноутбук Dell XPS 13</label>
+          <div class="product-price">37499.99 грн</div>
+        </div>
+        <div class="product-item">
+          <input type="checkbox" class="product-checkbox" id="product2" name="products[]" value="2" data-price="63499.99" onchange="calculateTotal()">
+          <label class="product-name" for="product2">Смартфон iPhone 15</label>
+          <div class="product-price">63499.99 грн</div>
+        </div>
+        <div class="product-item">
+          <input type="checkbox" class="product-checkbox" id="product3" name="products[]" value="3" data-price="44599.99" onchange="calculateTotal()">
+          <label class="product-name" for="product3">Планшет iPad Pro</label>
+          <div class="product-price">44599.99 грн</div>
+        </div>
+        <div class="product-item">
+          <input type="checkbox" class="product-checkbox" id="product4" name="products[]" value="4" data-price="11199.99" onchange="calculateTotal()">
+          <label class="product-name" for="product4">Навушники AirPods Pro</label>
+          <div class="product-price">11199.99 грн</div>
+        </div>
+        <div class="total-amount">
+          Загальна сума: <span id="totalAmount">0.00</span> грн
+        </div>
+      </div>
+    </div>
+    
+    <div class="payment-methods">
+      <label>Спосіб оплати:</label>
+      <div>
+        <input type="radio" id="cash" name="payment" value="cash" required>
+        <label for="cash">Готівковий розрахунок</label>
+        
+        <input type="radio" id="cashless" name="payment" value="cashless">
+        <label for="cashless">Безготівковий розрахунок</label>
+      </div>
+    </div>
+    
+    <div class="additional-info">
+        <label class="section-title">Додаткова інформація:</label>
+        <div class="checkbox-group">
+          <div class="checkbox-item">
+            <input type="checkbox" id="balance" name="additional[]" value="balance">
+            <label for="balance">Дані про залишки на рахунку</label>
+          </div>
+          <div class="checkbox-item">
+            <input type="checkbox" id="payments" name="additional[]" value="payments">
+            <label for="payments">Список останніх виплат по рахунку</label>
+          </div>
+        </div>
+      </div>
+    
+    <button class="submit-btn" href="empty.html">Відправити замовлення</button>
+  </form>
+</div>
+</body>
+</html>

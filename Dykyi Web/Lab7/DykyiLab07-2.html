@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Запит на доставку</title>
+    <style>
+        body {
+            background-color: #fafafa;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .form-container {
+            background-color: #f2f2f2;
+            padding: 30px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 600px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="password"],
+        select,
+        textarea {
+            background-color: #e0e0e0;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            width: 100%;
+            font-size: 14px;
+        }
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #ccc;
+            color: #333;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #444;
+            color: #fff;
+        }
+        .file-input {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .file-input label {
+            background-color: #ccc;
+            color: #333;
+            padding: 5px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .file-input label:hover {
+            background-color: #444;
+            color: #fff;
+        }
+        .file-input input[type="file"] {
+            display: none;
+        }
+        @media (max-width: 600px) {
+            .form-container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <form action="empty.html" method="get" target="_blank">
+        <div>
+            <label for="name">Ваше ім'я:</label>
+            <input type="text" id="name" name="name" placeholder="Введіть ваше ім'я">
+        </div>
+        <div>
+            <label>Ваша стать:</label>
+            <div>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Чоловіча</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Жіноча</label>
+            </div>
+        </div>
+        <div>
+            <label for="city">Місто доставки:</label>
+            <select id="city" name="city">
+                <option value="kyiv" selected>Київ</option>
+                <option value="lviv">Львів</option>
+                <option value="odessa">Одеса</option>
+                <option value="kharkiv">Харків</option>
+                <option value="dnipro">Дніпро</option>
+            </select>
+        </div>
+        <div>
+            <label>Послуги доставки:</label>
+            <div>
+                <input type="checkbox" id="standard" name="service" value="standard">
+                <label for="standard">Стандартна доставка</label><br>
+                <input type="checkbox" id="express" name="service" value="express">
+                <label for="express">Експрес-доставка</label>
+            </div>
+        </div>
+        <div>
+            <label for="details">Додаткові деталі:</label>
+            <textarea id="details" name="details" rows="5" placeholder="Наприклад: залишити біля дверей..."></textarea>
+        </div>
+        <div class="file-input">
+            <input type="file" id="attachment" name="attachment" accept=".pdf,.doc,.docx">
+            <label for="attachment">Прикріпити файл</label>
+        </div>
+        <div>
+            <input type="submit" value="Відправити запит">
+            <input type="reset" value="Очистити форму">
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
