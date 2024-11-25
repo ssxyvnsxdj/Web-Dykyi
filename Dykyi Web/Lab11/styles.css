@@ -1,0 +1,112 @@
+/* styles.css */
+
+body {
+    background-image: url('background.jpg'); /* Встановіть бажаний фон */
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-style: italic;
+}
+
+p {
+    text-align: justify;
+    text-indent: 2em; /* Червоний рядок */
+    margin-bottom: 1em;
+}
+
+h1 {
+    font-size: 3em;
+    color: #e8491d; /* Обраний колір */
+    font-weight: bold;
+    text-align: center;
+    font-style: normal; /* Нормальний стиль */
+    margin-top: 0;
+}
+
+h2 {
+    color: #e8491d;
+    border-bottom: 2px solid #e8491d;
+    padding-bottom: 10px;
+    margin-top: 2em;
+}
+
+section, .game-section, .review-section {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+img {
+    max-width: 400px;
+    height: auto;
+    display: block;
+    margin: 15px auto;
+    border-radius: 25px;
+}
+
+.highlight {
+    background-color: #ffeb3b;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+footer {
+    text-align: center;
+    padding: 30px 0;
+    background-color: #222;
+    color: #fff;
+}
+
+/* Стилі для навігаційного меню */
+nav {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+nav a:visited {
+    color: #666;
+}
+
+nav a:hover {
+    color: #e8491d;
+}
+
+nav a:active {
+    color: #bf1d0a;
+}
+
+/* Стилі для таблиці */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1em;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+}
